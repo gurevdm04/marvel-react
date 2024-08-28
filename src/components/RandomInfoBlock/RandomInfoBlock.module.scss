@@ -1,0 +1,63 @@
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.randomInfo {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  padding: 35px 40px;
+  gap: 30px;
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+}
+.img {
+  display: block;
+  max-width: 180px;
+  max-height: 180px;
+  object-fit: cover;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 22px;
+  color: #000;
+  margin: 0;
+}
+.text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
+.textInversion {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+.btns {
+  a + a {
+    margin-left: 30px;
+  }
+}
+.getRandomInfo {
+  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25);
+  background: #232222;
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 35px 40px;
+  position: relative;
+  p,
+  button {
+    position: relative;
+    z-index: 2;
+  }
+  img {
+    position: absolute;
+    bottom: 13px;
+    right: -30px;
+    z-index: 1;
+  }
+}

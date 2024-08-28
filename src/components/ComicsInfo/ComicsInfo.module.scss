@@ -1,0 +1,36 @@
+.wrap {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+}
+.img {
+  display: block;
+  max-width: 300px;
+}
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 22px;
+  color: #000;
+}
+.text,
+.page,
+.language {
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+}
+.price {
+  font-weight: 700;
+  font-size: 24px;
+  color: #9f0013;
+}
+.link {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  min-width: 100px;
+  cursor: pointer;
+}

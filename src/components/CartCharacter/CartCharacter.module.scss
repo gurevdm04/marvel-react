@@ -1,0 +1,20 @@
+.list {
+  list-style-type: none;
+  background: #232222;
+  min-height: 320px;
+}
+.img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+}
+.title {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  padding: 15px 15px 0 15px;
+  margin: 0;
+}
+.active {
+  box-shadow: 0 5px 20px 0 #9f0013;
+}

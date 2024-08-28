@@ -1,0 +1,15 @@
+.wrap {
+  button {
+    display: block;
+    margin: 45px auto 0 auto;
+    text-align: center;
+  }
+}
+.ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 30px;
+  margin: 0;padding: 0;
+}
