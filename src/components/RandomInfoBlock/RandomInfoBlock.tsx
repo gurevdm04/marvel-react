@@ -62,7 +62,7 @@ export const RandomInfoBlock = () => {
               <p className={style.text}>{randomInfoState.data?.description}</p>
               <div className={style.btns}>
                 <Button text="HOMEPAGE" href={randomInfoState.data?.detail} />
-                <Button text="WIKI" isGray href={randomInfoState.data?.wiki} />
+                <Button text="WIKI" isgray href={randomInfoState.data?.wiki} />
               </div>
             </div>
           </>

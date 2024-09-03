@@ -1,30 +1,24 @@
 import style from "./Button.module.scss";
 
-interface Props {
+interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
-  isGray?: boolean;
-  isCenter?: boolean;
-  href?: string;
-  onClick?: () => any;
+  isgray?: boolean;
+  iscenter?: boolean;
 }
 
 export const Button: React.FC<Props> = ({
-  text,
-  isGray,
-  isCenter,
-  href,
-  onClick,
+  isgray = false,
+  iscenter = false,
+  ...props
 }) => {
   return (
     <a
-      href={href}
-      className={`${style.button} ${isGray ? style.gray : null} ${
-        isCenter ? style.center : null
+      className={`${style.button} ${isgray ? style.gray : ""} ${
+        iscenter ? style.center : ""
       }`}
-      target="_blank"
-      onClick={onClick}
+      {...props}
     >
-      {text}
+      {props.text}
     </a>
   );
 };

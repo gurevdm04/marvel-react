@@ -15,7 +15,7 @@ export const ComicsPage = () => {
           element={
             <>
               <ComicsCarts />
-              <Button text="LOAD MORE" isCenter />
+              <Button text="LOAD MORE" iscenter />
             </>
           }
         />

@@ -12,7 +12,7 @@ export const CartsCharacter = () => {
         <CartCharacter />
         <CartCharacter />
       </ul>
-      <Button text="LOAD MORE" />
+      <Button text="LOAD MORE" iscenter />
     </div>
   );
 };

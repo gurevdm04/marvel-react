@@ -15,7 +15,7 @@ export const DescriptionBlock = () => {
         <div>
           <h3 className={style.title}>LOKI</h3>
           <Button text="HOMEPAGE" />
-          <Button text="WIKI" isGray />
+          <Button text="WIKI" isgray />
         </div>
       </div>
       <p className={style.text}>

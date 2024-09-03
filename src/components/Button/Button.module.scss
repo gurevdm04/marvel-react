@@ -1,5 +1,8 @@
 .button {
+  display: block;
+  max-width: max-content;
   padding: 11px 18px;
+  margin: 11px 0;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
@@ -12,6 +15,6 @@
   background: #5c5c5c;
 }
 .center {
-  display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
