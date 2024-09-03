@@ -18,3 +18,8 @@
   margin-left: auto;
   margin-right: auto;
 }
+.disabled {
+  pointer-events: none; /* Отключает все события мыши */
+  opacity: 0.6; /* Делаем кнопку полупрозрачной, чтобы показать, что она неактивна */
+  cursor: not-allowed; /* Меняем курсор на "запрещено" */
+}

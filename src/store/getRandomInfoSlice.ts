@@ -3,7 +3,7 @@ import axios from "axios";
 import { RootState } from "./store";
 import { generateRandomId } from "../utils/generateRandomId";
 
-interface randomInfo {
+interface RandomInfo {
   data: Data | null;
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
@@ -16,7 +16,7 @@ interface Data {
   wiki: string;
 }
 
-const initialState: randomInfo = {
+const initialState: RandomInfo = {
   data: null,
   status: "idle",
   error: null,

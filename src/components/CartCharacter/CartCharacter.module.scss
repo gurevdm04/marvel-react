@@ -2,11 +2,14 @@
   list-style-type: none;
   background: #232222;
   min-height: 320px;
+  max-width: 200px;
+  width: 200px;
 }
 .img {
   display: block;
   width: 100%;
   max-width: 200px;
+  height: 200px;
 }
 .title {
   font-weight: 700;
