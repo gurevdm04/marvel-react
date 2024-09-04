@@ -10,15 +10,7 @@ export const ComicsPage = () => {
     <>
       <Banner />
       <Routes>
-        <Route
-          path=""
-          element={
-            <>
-              <ComicsCarts />
-              <Button text="LOAD MORE" iscenter />
-            </>
-          }
-        />
+        <Route path="" element={<ComicsCarts />} />
         <Route path="*" element={<ComicsInfo />} />
       </Routes>
     </>
