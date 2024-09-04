@@ -29,13 +29,22 @@ const MyLoader = (props: any) => (
 export const CartsCharacter = () => {
   const dispatch = useAppDispatch();
   const characters = useSelector(selectCharacters);
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   const loadMore = () => {
     dispatch(setOffset());
   };
+  useEffect(() => {
+    if (!isFirstRender) {
+      dispatch(fetchCharacters(characters.offset));
+    }
+  }, [characters.offset]);
 
   useEffect(() => {
-    dispatch(fetchCharacters(characters.offset));
+    if (isFirstRender) {
+      dispatch(fetchCharacters(characters.offset));
+      setIsFirstRender(false);
+    }
   }, [dispatch, characters.offset]);
 
   if (characters.status === "failed") return <p>Error: {characters.error}</p>;

@@ -1,6 +1,6 @@
 import style from "./ComicsCarts.module.scss";
 import { ComicsCart } from "../ComicsCart/ComicsCart";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../store/store";
 import { useSelector } from "react-redux";
 import {
@@ -29,13 +29,23 @@ const MyLoader = (props: any) => (
 export const ComicsCarts = () => {
   const dispatch = useAppDispatch();
   const comics = useSelector(selectComics);
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   const loadMore = () => {
     dispatch(setOffsetComics());
   };
 
   useEffect(() => {
-    dispatch(fetchComics(comics.offset));
+    if (!isFirstRender) {
+      dispatch(fetchComics(comics.offset));
+    }
+  }, [comics.offset]);
+
+  useEffect(() => {
+    if (isFirstRender) {
+      dispatch(fetchComics(comics.offset));
+      setIsFirstRender(false);
+    }
   }, [dispatch, comics.offset]);
 
   if (comics.status === "failed") return <p>Error: {comics.error}</p>;
