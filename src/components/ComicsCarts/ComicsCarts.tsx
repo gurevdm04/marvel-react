@@ -42,7 +42,8 @@ export const ComicsCarts = () => {
   }, [comics.offset]);
 
   useEffect(() => {
-    if (isFirstRender) {
+    if (comics.data.length === 0) {
+      console.log("dis");
       dispatch(fetchComics(comics.offset));
       setIsFirstRender(false);
     }

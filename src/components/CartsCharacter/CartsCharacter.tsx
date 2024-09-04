@@ -34,6 +34,7 @@ export const CartsCharacter = () => {
   const loadMore = () => {
     dispatch(setOffset());
   };
+
   useEffect(() => {
     if (!isFirstRender) {
       dispatch(fetchCharacters(characters.offset));
@@ -41,7 +42,8 @@ export const CartsCharacter = () => {
   }, [characters.offset]);
 
   useEffect(() => {
-    if (isFirstRender) {
+    if (characters.data.length === 0) {
+      console.log("dis");
       dispatch(fetchCharacters(characters.offset));
       setIsFirstRender(false);
     }
