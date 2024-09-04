@@ -43,10 +43,9 @@ export const ComicsCarts = () => {
 
   useEffect(() => {
     if (comics.data.length === 0) {
-      console.log("dis");
       dispatch(fetchComics(comics.offset));
-      setIsFirstRender(false);
     }
+    setIsFirstRender(false);
   }, [dispatch, comics.offset]);
 
   if (comics.status === "failed") return <p>Error: {comics.error}</p>;

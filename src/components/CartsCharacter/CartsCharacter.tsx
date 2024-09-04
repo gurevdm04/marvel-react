@@ -45,8 +45,8 @@ export const CartsCharacter = () => {
     if (characters.data.length === 0) {
       console.log("dis");
       dispatch(fetchCharacters(characters.offset));
-      setIsFirstRender(false);
     }
+    setIsFirstRender(false);
   }, [dispatch, characters.offset]);
 
   if (characters.status === "failed") return <p>Error: {characters.error}</p>;
