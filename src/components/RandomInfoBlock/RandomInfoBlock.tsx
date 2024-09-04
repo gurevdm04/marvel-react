@@ -32,12 +32,16 @@ export const RandomInfoBlock = () => {
   const dispatch = useAppDispatch();
   const randomInfoState = useSelector(selectRandomInfo);
 
+  console.log(randomInfoState.data);
+
   const handleFetchUser = () => {
     dispatch(fetchRandomInfo());
   };
 
   useEffect(() => {
-    dispatch(fetchRandomInfo());
+    if (!randomInfoState.data) {
+      dispatch(fetchRandomInfo());
+    }
   }, [dispatch]);
 
   if (randomInfoState.status === "failed") {
