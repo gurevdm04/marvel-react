@@ -11,7 +11,7 @@ export const ComicsPage = () => {
       <Banner />
       <Routes>
         <Route path="" element={<ComicsCarts />} />
-        <Route path="*" element={<ComicsInfo />} />
+        <Route path=":id" element={<ComicsInfo />} />
       </Routes>
     </>
   );
