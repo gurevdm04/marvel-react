@@ -32,8 +32,6 @@ export const RandomInfoBlock = () => {
   const dispatch = useAppDispatch();
   const randomInfoState = useSelector(selectRandomInfo);
 
-  console.log(randomInfoState.data);
-
   const handleFetchUser = () => {
     dispatch(fetchRandomInfo());
   };

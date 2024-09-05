@@ -43,7 +43,6 @@ export const CartsCharacter = () => {
 
   useEffect(() => {
     if (characters.data.length === 0) {
-      console.log("dis");
       dispatch(fetchCharacters(characters.offset));
     }
     setIsFirstRender(false);
@@ -60,12 +59,13 @@ export const CartsCharacter = () => {
           <>
             {characters.data.map((character: any) => (
               <CartCharacter
-                key={character.id ? character.id : ""}
-                name={character.id ? character.name : ""}
+                key={character.id}
+                id={character.id}
+                name={character.name}
                 img={
-                  character?.thumbnail.path +
+                  character.thumbnail.path +
                   "." +
-                  character.thumbnail?.extension
+                  character.thumbnail.extension
                 }
               />
             ))}

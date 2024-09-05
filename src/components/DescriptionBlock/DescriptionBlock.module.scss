@@ -3,6 +3,11 @@
   background: #fff;
   padding: 25px;
   width: 425px;
+  align-self: flex-start;
+  min-height: 140px;
+  position: sticky;
+  top: 30px; /* Элемент станет липким, когда достигнет верхнего края контейнера */
+  z-index: 10; /* Установите приоритет отображения */
 }
 .header {
   display: flex;
@@ -42,4 +47,7 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: #fff;
   padding: 4px 10px;
+}
+.loader {
+  justify-content: center;
 }

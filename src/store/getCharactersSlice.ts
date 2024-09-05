@@ -5,6 +5,7 @@ import { RootState } from "./store";
 interface Characters {
   data: Data;
   offset: number;
+  selectedCharacter: number | "none";
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
 }
@@ -13,6 +14,7 @@ type Data = any[];
 const initialState: Characters = {
   data: [],
   offset: 0,
+  selectedCharacter: "none",
   status: "idle",
   error: null,
 };
@@ -33,7 +35,9 @@ const getCharactersSlice = createSlice({
   name: "getCharacters",
   initialState,
   reducers: {
-    // Редуктор для обновления offset
+    changeSelectedCharacter: (state, action: PayloadAction<number>) => {
+      state.selectedCharacter = action.payload;
+    },
     setOffset: (state) => {
       state.offset = state.offset + 9;
     },
@@ -56,7 +60,8 @@ const getCharactersSlice = createSlice({
       });
   },
 });
-export const { setOffset } = getCharactersSlice.actions;
+export const { setOffset, changeSelectedCharacter } =
+  getCharactersSlice.actions;
 
 export const selectCharacters = (state: RootState) => state.getCharacters;
 
