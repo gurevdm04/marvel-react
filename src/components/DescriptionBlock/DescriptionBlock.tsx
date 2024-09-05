@@ -50,8 +50,7 @@ export const DescriptionBlock = () => {
         )
         .then((result) => {
           const res = result.data.data.results[0];
-          console.log(res);
-          console.log(res.comics.items);
+
           setData({
             name: res.name,
             description: res.description,
@@ -106,15 +105,11 @@ export const DescriptionBlock = () => {
               <h4 className={style.listHeader}>Comics:</h4>
               <ul className={style.list}>
                 {data.comics.map(
-                  (item: { name: string; resourceURI: string }) => {
-                    console.log(item.name);
-
-                    return (
-                      <li key={item.name} className={style.item}>
-                        {item.name}
-                      </li>
-                    );
-                  }
+                  (item: { name: string; resourceURI: string }) => (
+                    <li key={item.name} className={style.item}>
+                      {item.name}
+                    </li>
+                  )
                 )}
               </ul>
             </>

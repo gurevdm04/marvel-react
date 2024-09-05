@@ -42,10 +42,11 @@ export const RandomInfoBlock = () => {
     }
   }, [dispatch]);
 
-  if (randomInfoState.status === "failed") {
-    handleFetchUser();
-    return <Loading />;
-  }
+  useEffect(() => {
+    if (randomInfoState.status === "failed") {
+      handleFetchUser();
+    }
+  }, [randomInfoState.status, handleFetchUser]);
 
   return (
     <div className={style.wrap}>
