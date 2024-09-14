@@ -38,6 +38,7 @@ export const DescriptionBlock = () => {
   const [status, setStatus] = useState<"idle" | "loading" | "succeeded">(
     "idle"
   );
+
   const dispatch = useAppDispatch();
   const { selectedCharacter } = useSelector(selectCharacters);
 
@@ -62,9 +63,9 @@ export const DescriptionBlock = () => {
           setStatus("succeeded");
         });
     }
-  }, [selectedCharacter]);
+  }, [selectedCharacter, dispatch]);
   return (
-    <div className={style.wrap}>
+    <aside className={style.wrap}>
       {status === "idle" && (
         <>
           <>
@@ -116,6 +117,6 @@ export const DescriptionBlock = () => {
           ) : null}
         </>
       )}
-    </div>
+    </aside>
   );
 };

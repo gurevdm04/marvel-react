@@ -35,7 +35,7 @@ const getCharactersSlice = createSlice({
   name: "getCharacters",
   initialState,
   reducers: {
-    changeSelectedCharacter: (state, action: PayloadAction<number>) => {
+    changeSelectedCharacter: (state, action: PayloadAction<number | "none">) => {
       state.selectedCharacter = action.payload;
     },
     setOffset: (state) => {
