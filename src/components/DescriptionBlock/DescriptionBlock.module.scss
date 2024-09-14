@@ -10,10 +10,16 @@
   z-index: 10; /* Установите приоритет отображения */
   max-height: 90vh; /* Максимальная высота для sidebar */
   overflow-y: auto; /* Добавляем внутренний скролл */
+  @media (max-width: 574px) {
+    padding: 5px;
+  }
 }
 .header {
   display: flex;
   gap: 25px;
+  @media (max-width: 574px) {
+    flex-direction: column;
+  }
 }
 .img {
   width: 100%;

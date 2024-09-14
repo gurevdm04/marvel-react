@@ -11,8 +11,8 @@ import { Grid } from "react-loader-spinner";
 const Loader = (props: any) => (
   <ContentLoader
     speed={2}
-    width={375}
-    height={190}
+    width={"100%"}
+    height={"100%"}
     viewBox="0 0 375 190"
     backgroundColor="#cbc8c8"
     foregroundColor="#ecebeb"

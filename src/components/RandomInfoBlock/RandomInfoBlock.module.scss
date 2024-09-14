@@ -4,6 +4,9 @@
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  @media (max-width: 660px) {
+    display: block;
+  }
 }
 .randomInfo {
   grid-area: 1 / 1 / 2 / 2;
@@ -14,6 +17,12 @@
   background: #fff;
   min-width: 50%;
   min-height: 250px;
+  @media (max-width: 1000px) {
+    padding: 15px;
+  }
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
 }
 .imgBlock {
   width: 180px;
@@ -25,6 +34,9 @@
   width: 180px;
   height: 180px;
   object-fit: cover;
+  @media (max-width: 660px) {
+    width: 100%;
+  }
 }
 .title {
   font-family: var(--font-family);
@@ -45,10 +57,17 @@
   font-weight: 700;
   font-size: 24px;
   color: #fff;
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
 }
 .btns {
   display: flex;
   gap: 30px;
+  @media (max-width: 900px) {
+    display: block;
+    gap: 0;
+  }
 }
 .getRandomInfo {
   box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.25);
@@ -56,11 +75,16 @@
   grid-area: 1 / 2 / 2 / 3;
   padding: 35px 40px;
   position: relative;
-
+  @media (max-width: 1000px) {
+    padding: 15px;
+  }
   img {
     position: absolute;
     bottom: 13px;
     right: -30px;
     z-index: 1;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }

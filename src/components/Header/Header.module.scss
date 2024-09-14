@@ -2,20 +2,41 @@
   font-weight: 700;
   font-size: 28px;
   color: #9f0013;
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+  @media (max-width: 574px) {
+    font-size: 16px;
+  }
 }
 .wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 50px 0;
+  @media (max-width: 768px) {
+    margin: 25px 0;
+  }
 }
 .logo {
   font-weight: 700;
   font-size: 28px;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+  @media (max-width: 574px) {
+    font-size: 16px;
+  }
 }
 .pages {
   font-weight: 700;
   font-size: 24px;
   color: #000;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media (max-width: 574px) {
+    font-size: 16px;
+  }
 }

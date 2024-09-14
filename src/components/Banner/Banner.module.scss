@@ -2,12 +2,23 @@
   background: #232222;
   display: flex;
   justify-content: space-around;
+  @media (max-width: 768px) {
+    height: 80px;
+  }
 }
 .text {
   font-weight: 700;
   font-size: 24px;
   color: #fff;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 }
 .img {
   display: block;
+  height: 100%;
+    @media (max-width: 574px) {
+    display: none;
+  }
 }

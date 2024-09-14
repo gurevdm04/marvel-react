@@ -3,13 +3,14 @@
   background: #232222;
   min-height: 320px;
   max-width: 200px;
-  width: 200px;
+  width: 100%;
 }
 .img {
   display: block;
   width: 100%;
   max-width: 200px;
   height: 200px;
+  object-fit: cover;
 }
 .title {
   font-weight: 700;

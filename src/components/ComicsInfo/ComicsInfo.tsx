@@ -55,7 +55,7 @@ export const ComicsInfo = () => {
             <p className={style.language}>Language: {data.language}</p>
             <p className={style.price}>{data.price}$</p>
           </div>
-          <div>
+          <div className={style.prev}>
             <p className={style.link} onClick={handleBackClick}>
               Back to all
             </p>

@@ -1,10 +1,23 @@
 .wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 67px;
   grid-row-gap: 55px;
   margin: 50px 0;
+  @media (max-width: 1000px) {
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 574px) {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 25px 0;
+  }
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .loader {
   align-items: center;
