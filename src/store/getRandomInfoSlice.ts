@@ -69,3 +69,4 @@ const getRandomInfoSlice = createSlice({
 export const selectRandomInfo = (state: RootState) => state.getRandomInfo;
 
 export default getRandomInfoSlice.reducer;
+  

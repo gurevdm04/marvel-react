@@ -64,6 +64,7 @@ export const DescriptionBlock = () => {
         });
     }
   }, [selectedCharacter, dispatch]);
+  
   return (
     <aside className={style.wrap}>
       {status === "idle" && (
